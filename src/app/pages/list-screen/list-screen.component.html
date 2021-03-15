@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="add-link-panel">
+        <button mat-raised-button color="primary" (click)="goToAddLinkScreen()">
+            <mat-icon>add_box</mat-icon>
+            SUBMIT A LINK
+        </button>
+    </div>
+    <mat-form-field appearance="fill">
+        <mat-label>Order By</mat-label>
+        <mat-select [(ngModel)]="selectedSortType" (selectionChange)="onChangeSort()">
+          <mat-option *ngFor="let sort of sortTypes" [value]="sort.value">
+            {{sort.key}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    <div class="link-list">
+        <div *ngFor="let link of linkList.linkList; index as i">
+                <app-link-card [link]="link"></app-link-card>
+        </div>
+        <!-- <mat-paginator [length]="linkList.linkList.length"
+               [pageSize]="pageSize"
+               [pageSizeOptions]="pageSizeOptions"
+               (page)="pageEvent = $event">
+        </mat-paginator> -->
+    </div>
+</div>

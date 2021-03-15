@@ -1,0 +1,11 @@
+.container{
+    padding: 25px;
+    h1{
+        font-weight: bold;
+    }
+    .form-fields{
+        display: flex;
+        flex-direction: column;
+        max-width: 350px;
+    }
+}

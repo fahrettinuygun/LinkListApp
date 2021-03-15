@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="back-button">
+        <button mat-button (click)="goToList()">
+            <mat-icon>arrow_back</mat-icon>
+            Return to List
+        </button>
+    </div>
+    <h1>Add New Link</h1>
+    <div class="form-fields">
+        <mat-form-field appearance="fill">
+            <mat-label>Link Name</mat-label>
+            <input [(ngModel)]="linkName" matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Link Url</mat-label>
+            <input [(ngModel)]="linkUrl" matInput>
+        </mat-form-field>
+    </div>
+    <button mat-raised-button (click)="addLink()">Add</button>
+</div>

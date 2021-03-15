@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="point">
+        <h1>{{link.voteCount}}</h1>
+        <span>POINTS</span>
+    </div>
+    <div class="info">
+        <h1>{{link.name}}</h1>
+        <span>(<a>{{link.url}}</a>)</span>
+        <div class="vote-buttons">
+            <button mat-button (click)="vote(+1)">
+                <mat-icon>arrow_upward</mat-icon>
+                Up Vote
+            </button>
+            <button mat-button (click)="vote(-1)">
+                <mat-icon>arrow_downward</mat-icon>
+                Down Vote
+            </button>
+        </div>
+    </div>
+    <div>
+        <button mat-mini-fab color="warn" class="delete-button" (click)="remove()">
+            <mat-icon>remove_circle</mat-icon>
+          </button>
+    </div>
+</div>

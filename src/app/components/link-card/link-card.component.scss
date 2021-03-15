@@ -1,0 +1,50 @@
+.container{
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+    .delete-button{
+        display: none;
+        position: absolute;
+        margin-top: -50px;
+    }
+    .point{
+        height: 100%;
+        h1{
+            margin: 0;
+            font-weight: bold;
+        }
+        background-color:  rgb(195, 195, 195);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+    }
+    .info{
+        height: 100%;
+        padding: 5px;
+        h1{
+            margin: 0;
+            padding-left: 5px;
+            font-weight: bold;
+        }
+        span{
+            padding-left: 5px;
+        }
+        .vote-buttons{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+    }
+}
+
+.container:hover{
+    border: 1px solid rgb(188, 82, 82);
+    border-radius: 10px;
+    padding: 10px;
+    .delete-button{
+        display: inline;
+    }
+}
